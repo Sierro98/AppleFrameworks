@@ -9,7 +9,21 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        let layout = Array(repeating: GridItem(.flexible()), count: 3)
+        let frameworks: [Framework] = MockData.frameworks
+        
+        NavigationView {
+            ScrollView {
+                LazyVGrid(columns: layout, spacing: 40) {
+                    ForEach(frameworks) { item in
+                        Framework_Item(image: item.imageName, title: item.name)
+                    }
+                }
+                .padding()
+            }
+            .navigationTitle("Apple Frameworks")
+        }
     }
 }
 
