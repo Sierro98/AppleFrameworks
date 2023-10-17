@@ -8,21 +8,29 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @StateObject var viewmodel = HomeViewModel()
+    let layout = Array(repeating: GridItem(.flexible()), count: 3)
+    let frameworks: [Framework] = MockData.frameworks
+    
     var body: some View {
-        
-        let layout = Array(repeating: GridItem(.flexible()), count: 3)
-        let frameworks: [Framework] = MockData.frameworks
-        
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: layout, spacing: 40) {
                     ForEach(frameworks) { framework in
                         Framework_Item(framework: framework)
+                            .onTapGesture {
+                                viewmodel.selectedFramework = framework
+                                viewmodel.isShowingDetailView = true
+                            }
                     }
                 }
                 .padding()
             }
             .navigationTitle("Apple Frameworks")
+            .sheet(isPresented: $viewmodel.isShowingDetailView) {
+                DetailView(framework: viewmodel.selectedFramework ?? MockData.sampleFramework, isShowingDetailView: $viewmodel.isShowingDetailView)
+            }
         }
     }
 }
