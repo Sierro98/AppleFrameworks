@@ -16,8 +16,8 @@ struct HomeView: View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: layout, spacing: 40) {
-                    ForEach(frameworks) { item in
-                        Framework_Item(image: item.imageName, title: item.name)
+                    ForEach(frameworks) { framework in
+                        Framework_Item(framework: framework)
                     }
                 }
                 .padding()

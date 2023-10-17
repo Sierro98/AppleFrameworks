@@ -9,15 +9,14 @@ import SwiftUI
 
 struct Framework_Item: View {
     
-    let image: String
-    let title: String
+    let framework: Framework
     
     var body: some View {
         VStack(spacing: 5) {
-            Image(image)
+            Image(framework.imageName)
                 .resizable()
                 .frame(width: 90, height: 90)
-            Text(title)
+            Text(framework.name)
                 .font(.title3)
                 .fontWeight(.medium)
                 .scaledToFit()
@@ -27,5 +26,5 @@ struct Framework_Item: View {
 }
 
 #Preview {
-    Framework_Item(image: "app-clip", title: "AppClips")
+    Framework_Item(framework: MockData.frameworks[0])
 }
