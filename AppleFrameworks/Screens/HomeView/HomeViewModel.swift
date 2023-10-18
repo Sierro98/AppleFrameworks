@@ -10,9 +10,7 @@ import SwiftUI
 final class HomeViewModel: ObservableObject {
     
     var selectedFramework: Framework? {
-        didSet {
-            isShowingDetailView = true
-        }
+        didSet { isShowingDetailView = true }
     }
     
     @Published var isShowingDetailView: Bool  = false
