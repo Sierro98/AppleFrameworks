@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-final class HomeViewModel: ObservableObject {
+final class FrameworksViewModel: ObservableObject {
     
     var selectedFramework: Framework? {
         didSet { isShowingDetailView = true }

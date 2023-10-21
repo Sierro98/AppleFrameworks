@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE274FC52AE44FDD0054AB5B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE274FC42AE44FDD0054AB5B /* HomeView.swift */; };
 		AE3E4DCB2ADDC6E400F51E81 /* AppleFrameworksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E4DCA2ADDC6E400F51E81 /* AppleFrameworksApp.swift */; };
 		AE3E4DCF2ADDC6E500F51E81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE3E4DCE2ADDC6E500F51E81 /* Assets.xcassets */; };
 		AE3E4DD22ADDC6E500F51E81 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE3E4DD12ADDC6E500F51E81 /* Preview Assets.xcassets */; };
 		AE3E4DD92ADDC79400F51E81 /* Framework.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E4DD82ADDC79400F51E81 /* Framework.swift */; };
-		AE3E4DDB2ADDC8FF00F51E81 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E4DDA2ADDC8FF00F51E81 /* HomeView.swift */; };
-		AE5F811C2ADEE243002E8972 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5F811B2ADEE243002E8972 /* HomeViewModel.swift */; };
+		AE3E4DDB2ADDC8FF00F51E81 /* FrameworksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E4DDA2ADDC8FF00F51E81 /* FrameworksView.swift */; };
+		AE5F811C2ADEE243002E8972 /* FrameworksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5F811B2ADEE243002E8972 /* FrameworksViewModel.swift */; };
 		AE93D76C2AE05A1700690D1A /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93D76B2AE05A1700690D1A /* SafariView.swift */; };
 		AE93D76E2AE0637E00690D1A /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93D76D2AE0637E00690D1A /* XDismissButton.swift */; };
 		AED92E222ADE981200F7CA86 /* Framework-Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED92E212ADE981100F7CA86 /* Framework-Item.swift */; };
@@ -22,13 +23,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE274FC42AE44FDD0054AB5B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AE3E4DC72ADDC6E400F51E81 /* AppleFrameworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleFrameworks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE3E4DCA2ADDC6E400F51E81 /* AppleFrameworksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleFrameworksApp.swift; sourceTree = "<group>"; };
 		AE3E4DCE2ADDC6E500F51E81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE3E4DD12ADDC6E500F51E81 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AE3E4DD82ADDC79400F51E81 /* Framework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Framework.swift; sourceTree = "<group>"; };
-		AE3E4DDA2ADDC8FF00F51E81 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		AE5F811B2ADEE243002E8972 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		AE3E4DDA2ADDC8FF00F51E81 /* FrameworksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworksView.swift; sourceTree = "<group>"; };
+		AE5F811B2ADEE243002E8972 /* FrameworksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworksViewModel.swift; sourceTree = "<group>"; };
 		AE93D76B2AE05A1700690D1A /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		AE93D76D2AE0637E00690D1A /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
 		AED92E212ADE981100F7CA86 /* Framework-Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Framework-Item.swift"; sourceTree = "<group>"; };
@@ -48,6 +50,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE274FC32AE44FCD0054AB5B /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				AE274FC42AE44FDD0054AB5B /* HomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
 		AE3E4DBE2ADDC6E400F51E81 = {
 			isa = PBXGroup;
 			children = (
@@ -89,20 +99,21 @@
 		AEE0067F2AE066E800FC66E0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				AEE006802AE066F300FC66E0 /* HomeView */,
+				AE274FC32AE44FCD0054AB5B /* HomeView */,
+				AEE006802AE066F300FC66E0 /* FrameworksView */,
 				AEE006812AE0670700FC66E0 /* DetailView */,
 				AEEEFA632AE06AC4008691FA /* GeneralSettingsView */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		AEE006802AE066F300FC66E0 /* HomeView */ = {
+		AEE006802AE066F300FC66E0 /* FrameworksView */ = {
 			isa = PBXGroup;
 			children = (
-				AE3E4DDA2ADDC8FF00F51E81 /* HomeView.swift */,
-				AE5F811B2ADEE243002E8972 /* HomeViewModel.swift */,
+				AE3E4DDA2ADDC8FF00F51E81 /* FrameworksView.swift */,
+				AE5F811B2ADEE243002E8972 /* FrameworksViewModel.swift */,
 			);
-			path = HomeView;
+			path = FrameworksView;
 			sourceTree = "<group>";
 		};
 		AEE006812AE0670700FC66E0 /* DetailView */ = {
@@ -233,11 +244,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE3E4DDB2ADDC8FF00F51E81 /* HomeView.swift in Sources */,
+				AE3E4DDB2ADDC8FF00F51E81 /* FrameworksView.swift in Sources */,
 				AEE0067E2AE0660700FC66E0 /* AFButton.swift in Sources */,
-				AE5F811C2ADEE243002E8972 /* HomeViewModel.swift in Sources */,
+				AE5F811C2ADEE243002E8972 /* FrameworksViewModel.swift in Sources */,
 				AED92E222ADE981200F7CA86 /* Framework-Item.swift in Sources */,
 				AE3E4DD92ADDC79400F51E81 /* Framework.swift in Sources */,
+				AE274FC52AE44FDD0054AB5B /* HomeView.swift in Sources */,
 				AED92E242ADEA78100F7CA86 /* DetailView.swift in Sources */,
 				AEEEFA652AE06AE9008691FA /* GeneralSettingsView.swift in Sources */,
 				AE3E4DCB2ADDC6E400F51E81 /* AppleFrameworksApp.swift in Sources */,
