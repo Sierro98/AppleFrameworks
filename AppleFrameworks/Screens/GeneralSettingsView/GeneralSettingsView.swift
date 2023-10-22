@@ -9,7 +9,9 @@ import SwiftUI
 
 struct GeneralSettingsView: View {
     
-    @State var toggleList: Array<Bool> = [true, false, false]
+    @State private var lightTheme = true
+    @State private var darkTheme = false
+    @State private var systemTheme = false
     
     var body: some View {
         NavigationView {
@@ -21,15 +23,27 @@ struct GeneralSettingsView: View {
                     }
                 }
                 Section(header: Text("Theme")) {
-                    Toggle(isOn: $toggleList[0]) {
-                        Text("Light Theme")
-                    }
-                    Toggle(isOn: $toggleList[1]) {
-                        Text("Dark Theme")
-                    }
-                    Toggle(isOn: $toggleList[2]) {
-                        Text("System Theme")
-                    }
+                    Toggle("Light Theme", isOn: $lightTheme)
+                        .onChange(of: lightTheme) { oldValue, newValue in
+                            if newValue {
+                                darkTheme = false
+                                systemTheme = false
+                            }
+                        }
+                    Toggle("Dark Theme", isOn: $darkTheme)
+                        .onChange(of: darkTheme) { oldValue, newValue in
+                            if newValue {
+                                lightTheme = false
+                                systemTheme = false
+                            }
+                        }
+                    Toggle("System Theme", isOn: $systemTheme)
+                        .onChange(of: systemTheme) { oldValue, newValue in
+                            if newValue {
+                                lightTheme = false
+                                darkTheme = false
+                            }
+                        }
                 }
                 Section {
                     Link(destination: URL(string: "https://www.linkedin.com/in/alejandro-sierro-galán-15016b261/")!) {
