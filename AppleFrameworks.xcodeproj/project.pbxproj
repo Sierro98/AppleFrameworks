@@ -14,6 +14,10 @@
 		AE3E4DD92ADDC79400F51E81 /* Framework.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E4DD82ADDC79400F51E81 /* Framework.swift */; };
 		AE3E4DDB2ADDC8FF00F51E81 /* FrameworksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3E4DDA2ADDC8FF00F51E81 /* FrameworksView.swift */; };
 		AE5F811C2ADEE243002E8972 /* FrameworksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5F811B2ADEE243002E8972 /* FrameworksViewModel.swift */; };
+		AE9166E12AE58D0800278721 /* SystemThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9166E02AE58D0800278721 /* SystemThemeManager.swift */; };
+		AE9166EC2AE5985500278721 /* FrameworksListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9166EA2AE5985500278721 /* FrameworksListViewModel.swift */; };
+		AE9166ED2AE5985500278721 /* FrameworksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9166EB2AE5985500278721 /* FrameworksListView.swift */; };
+		AE9166EF2AE599F600278721 /* Framework-ItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9166EE2AE599F600278721 /* Framework-ItemList.swift */; };
 		AE93D76C2AE05A1700690D1A /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93D76B2AE05A1700690D1A /* SafariView.swift */; };
 		AE93D76E2AE0637E00690D1A /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE93D76D2AE0637E00690D1A /* XDismissButton.swift */; };
 		AED92E222ADE981200F7CA86 /* Framework-Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED92E212ADE981100F7CA86 /* Framework-Item.swift */; };
@@ -31,6 +35,10 @@
 		AE3E4DD82ADDC79400F51E81 /* Framework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Framework.swift; sourceTree = "<group>"; };
 		AE3E4DDA2ADDC8FF00F51E81 /* FrameworksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworksView.swift; sourceTree = "<group>"; };
 		AE5F811B2ADEE243002E8972 /* FrameworksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameworksViewModel.swift; sourceTree = "<group>"; };
+		AE9166E02AE58D0800278721 /* SystemThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemThemeManager.swift; sourceTree = "<group>"; };
+		AE9166EA2AE5985500278721 /* FrameworksListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameworksListViewModel.swift; sourceTree = "<group>"; };
+		AE9166EB2AE5985500278721 /* FrameworksListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameworksListView.swift; sourceTree = "<group>"; };
+		AE9166EE2AE599F600278721 /* Framework-ItemList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Framework-ItemList.swift"; sourceTree = "<group>"; };
 		AE93D76B2AE05A1700690D1A /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		AE93D76D2AE0637E00690D1A /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
 		AED92E212ADE981100F7CA86 /* Framework-Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Framework-Item.swift"; sourceTree = "<group>"; };
@@ -96,11 +104,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		AE9166E92AE5985500278721 /* FrameworksListView */ = {
+			isa = PBXGroup;
+			children = (
+				AE9166EB2AE5985500278721 /* FrameworksListView.swift */,
+				AE9166EA2AE5985500278721 /* FrameworksListViewModel.swift */,
+			);
+			path = FrameworksListView;
+			sourceTree = "<group>";
+		};
 		AEE0067F2AE066E800FC66E0 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				AE274FC32AE44FCD0054AB5B /* HomeView */,
 				AEE006802AE066F300FC66E0 /* FrameworksView */,
+				AE9166E92AE5985500278721 /* FrameworksListView */,
 				AEE006812AE0670700FC66E0 /* DetailView */,
 				AEEEFA632AE06AC4008691FA /* GeneralSettingsView */,
 			);
@@ -128,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				AE3E4DD82ADDC79400F51E81 /* Framework.swift */,
+				AE9166E02AE58D0800278721 /* SystemThemeManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				AED92E212ADE981100F7CA86 /* Framework-Item.swift */,
+				AE9166EE2AE599F600278721 /* Framework-ItemList.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -249,12 +269,16 @@
 				AE5F811C2ADEE243002E8972 /* FrameworksViewModel.swift in Sources */,
 				AED92E222ADE981200F7CA86 /* Framework-Item.swift in Sources */,
 				AE3E4DD92ADDC79400F51E81 /* Framework.swift in Sources */,
+				AE9166EC2AE5985500278721 /* FrameworksListViewModel.swift in Sources */,
 				AE274FC52AE44FDD0054AB5B /* HomeView.swift in Sources */,
 				AED92E242ADEA78100F7CA86 /* DetailView.swift in Sources */,
 				AEEEFA652AE06AE9008691FA /* GeneralSettingsView.swift in Sources */,
 				AE3E4DCB2ADDC6E400F51E81 /* AppleFrameworksApp.swift in Sources */,
 				AE93D76C2AE05A1700690D1A /* SafariView.swift in Sources */,
+				AE9166EF2AE599F600278721 /* Framework-ItemList.swift in Sources */,
+				AE9166E12AE58D0800278721 /* SystemThemeManager.swift in Sources */,
 				AE93D76E2AE0637E00690D1A /* XDismissButton.swift in Sources */,
+				AE9166ED2AE5985500278721 /* FrameworksListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

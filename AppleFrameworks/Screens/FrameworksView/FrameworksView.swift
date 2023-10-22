@@ -12,6 +12,7 @@ struct FrameworksView: View {
     @StateObject var viewmodel = FrameworksViewModel()
     let layout = Array(repeating: GridItem(.flexible()), count: 3)
     let frameworks: [Framework] = MockData.frameworks
+    @Binding var listDisplay: Bool
     
     var body: some View {
         NavigationView {
@@ -29,12 +30,13 @@ struct FrameworksView: View {
             }
             .navigationTitle("Apple Frameworks")
             .sheet(isPresented: $viewmodel.isShowingDetailView) {
-                DetailView(framework: viewmodel.selectedFramework ?? MockData.sampleFramework, isShowingDetailView: $viewmodel.isShowingDetailView)
+                DetailView(framework: viewmodel.selectedFramework ?? MockData.sampleFramework, isShowingDetailView: $viewmodel.isShowingDetailView,
+                listDisplay: $listDisplay)
             }
         }
     }
 }
 
 #Preview {
-    FrameworksView()
+    FrameworksView(listDisplay: .constant(false))
 }

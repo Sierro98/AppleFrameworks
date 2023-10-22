@@ -9,18 +9,17 @@ import SwiftUI
 
 struct GeneralSettingsView: View {
     
-    @State private var lightTheme = true
-    @State private var darkTheme = false
-    @State private var systemTheme = false
+    @Binding var listDisplay: Bool
+    @Binding var lightTheme: Bool
+    @Binding var darkTheme: Bool
+    @Binding var systemTheme: Bool
     
     var body: some View {
         NavigationView {
             Form {
                 Section(header: Text("Display"),
                         footer: Text("Select if you prefer a list style for the frameworks list.")) {
-                    Toggle(isOn: .constant(false)) {
-                        Text("List Style")
-                    }
+                    Toggle("List Style", isOn: $listDisplay)
                 }
                 Section(header: Text("Theme")) {
                     Toggle("Light Theme", isOn: $lightTheme)
@@ -29,6 +28,11 @@ struct GeneralSettingsView: View {
                                 darkTheme = false
                                 systemTheme = false
                             }
+                            SystemThemeManager
+                                .shared
+                                .handleTheme(lightTheme: lightTheme,
+                                             darkTheme: darkTheme,
+                                             systemTheme: systemTheme)
                         }
                     Toggle("Dark Theme", isOn: $darkTheme)
                         .onChange(of: darkTheme) { oldValue, newValue in
@@ -36,6 +40,11 @@ struct GeneralSettingsView: View {
                                 lightTheme = false
                                 systemTheme = false
                             }
+                            SystemThemeManager
+                                .shared
+                                .handleTheme(lightTheme: lightTheme,
+                                             darkTheme: darkTheme,
+                                             systemTheme: systemTheme)
                         }
                     Toggle("System Theme", isOn: $systemTheme)
                         .onChange(of: systemTheme) { oldValue, newValue in
@@ -43,6 +52,11 @@ struct GeneralSettingsView: View {
                                 lightTheme = false
                                 darkTheme = false
                             }
+                            SystemThemeManager
+                                .shared
+                                .handleTheme(lightTheme: lightTheme,
+                                             darkTheme: darkTheme,
+                                             systemTheme: systemTheme)
                         }
                 }
                 Section {
@@ -57,5 +71,8 @@ struct GeneralSettingsView: View {
     }
 }
 #Preview {
-    GeneralSettingsView()
+    GeneralSettingsView(listDisplay: .constant(false),
+                        lightTheme: .constant(false),
+                        darkTheme: .constant(false),
+                        systemTheme: .constant(true))
 }
